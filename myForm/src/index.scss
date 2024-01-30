@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "URW";
+    src: local("URW"),
+     url("./fonts/URW.ttf") format("truetype");
+   }
+
+   body, html{
+    font-family: "URW";
+   }

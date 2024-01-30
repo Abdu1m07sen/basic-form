@@ -12,18 +12,10 @@ import 'react-toastify/dist/ReactToastify.css';
 import "./FormComponent.scss"
 
 const schema = z.object({
-  fullName: z.string().min().refine((val) => val.trim() !== '', {
-    message: 'Full name is required',
-  }),
-  phoneNumber: z.string().min().refine((val) => val.trim() !== '', {
-    message: 'Phone number is required',
-  }),
-  email: z.string().email('Invalid email format').refine((val) => val.trim() !== '', {
-    message: 'Email is required',
-  }),
-  password: z.string().min(8).refine((val) => val.trim() !== '', {
-    message: 'Password is required',
-  }),
+  fullName: z.string({}).min(1,{message: "Please enter your full name"}),
+  phoneNumber: z.string().min(7, {message: "Please enter valid phone number"}),
+  email: z.string().email({message: "Please enter your email"}),
+  password: z.string().min(8, {message: "Password must contains at least 8 characters"}),
   jobType: z.string().refine((val) => val.trim() !== '', {
     message: 'Job type is required',
   }),
@@ -183,12 +175,11 @@ const FormComponent = () => {
     className='mx-3'
       type="checkbox"
       {...register('termsAgreement', { validate: validateTerms })}
-      onChange={(e) => e.stopPropagation()}
     />
-    <span>I agree to the Terms and Conditions</span>
+    <span style={{textDecoration: 'underline'}}>I agree to the Terms and Conditions</span>
   </div>
   {errors.termsAgreement && (
-    <p className="text-danger">{errors.termsAgreement?.message}</p>
+    <p className="text-danger mx-3">{errors.termsAgreement?.message}</p>
   )}
   <TermsModal showModal={showModal} handleClose={handleClose} />
 </Row>
