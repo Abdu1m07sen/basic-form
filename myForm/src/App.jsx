@@ -1,10 +1,12 @@
 import './App.scss'
-import FormComponent from './components/FormComponent'
+import DataTable from './components/DataTable/DataTable'
+import FormComponent from './components/FormComponent/FormComponent'
 import { Container } from 'react-bootstrap'
 function App() {
   return (
       <Container>
         <FormComponent/>
+        <DataTable/>
       </Container>
   )
 }
