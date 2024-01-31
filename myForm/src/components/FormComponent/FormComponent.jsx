@@ -31,7 +31,7 @@ const TermsModal = ({ showModal, handleClose }) => (
       <Modal.Title>Terms and Conditions</Modal.Title>
     </Modal.Header>
     <Modal.Body>
-      {/* Add your terms and conditions content here */}
+      
       Your terms and conditions content goes here.
     </Modal.Body>
     <Modal.Footer>

@@ -35,29 +35,7 @@ const DataTable = () => {
 
   return (
     <div>
-      {/* <h2>Data Table</h2>
-      <Table striped bordered hover>
-        <thead>
-          <tr>
-            <th>Full Name</th>
-            <th>Phone Number</th>
-            <th>Email Address</th>
-            <th>Password</th>
-            <th>Job Type</th>
-          </tr>
-        </thead>
-        <tbody>
-          {submittedData.map((item, index) => (
-            <tr key={index}>
-              <td>{item.fullName}</td>
-              <td>{item.phoneNumber}</td>
-              <td>{item.email}</td>
-              <td>{item.password}</td>
-              <td>{item.jobType}</td>
-            </tr>
-          ))}
-        </tbody>
-      </Table> */}
+  
 
       <Row className='mb-3'>
       <Card className='text-center'>
