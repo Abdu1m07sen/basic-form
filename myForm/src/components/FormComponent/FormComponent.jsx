@@ -13,7 +13,7 @@ import "./FormComponent.scss"
 
 const schema = z.object({
   fullName: z.string({}).min(1,{message: "Please enter your full name"}),
-  phoneNumber: z.string().min(7, {message: "Please enter valid phone number"}),
+  phoneNumber: z.string().min(10, {message: "Please enter valid phone number"}),
   email: z.string().email({message: "Please enter your email"}),
   password: z.string().min(8, {message: "Password must contains at least 8 characters"}),
   jobType: z.string().refine((val) => val.trim() !== '', {
