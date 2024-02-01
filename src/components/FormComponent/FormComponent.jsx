@@ -175,7 +175,6 @@ const FormComponent = () => {
                       alignItems: "center",
                       cursor: "pointer",
                     }}
-                    onClick={handleShow}
                   >
                     <input
                       className="mx-3"
@@ -184,7 +183,10 @@ const FormComponent = () => {
                         validate: validateTerms,
                       })}
                     />
-                    <span style={{ textDecoration: "underline" }}>
+                    <span 
+                      style={{ textDecoration: "underline" }}
+                      onClick={handleShow}
+                    >
                       I agree to the Terms and Conditions
                     </span>
                   </div>

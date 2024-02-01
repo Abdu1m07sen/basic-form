@@ -38,7 +38,8 @@ const DataTable = () => {
       <Row className="mb-3">
         <Card className="text-center">
           <h2>Users Data</h2>
-          <div className="d-md-flex flex-wrap gap-3 justify-content-center">
+          {submittedData.length > 0 ? (
+            <div className="d-md-flex flex-wrap gap-3 justify-content-center">
             {submittedData.map((item, index) => (
               <ListGroup key={index} className="my-4 w-sm-25">
                 <ListGroup.Item>
@@ -64,6 +65,10 @@ const DataTable = () => {
               </ListGroup>
             ))}
           </div>
+          ) : 
+          (
+            <h4>No data</h4>
+          )}
         </Card>
       </Row>
     </div>
